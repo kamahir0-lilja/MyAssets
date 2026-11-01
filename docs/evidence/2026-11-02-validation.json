@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-02",
+  "environment": {
+    "os": "macOS arm64",
+    "unityVersion": "6000.6.6f1",
+    "unityCliVersion": "1.0.0-beta.15",
+    "pipelinePackageVersion": "0.8.0-exp.1"
+  },
+  "package": {
+    "name": "com.kamahir0.my-assets",
+    "version": "0.1.0",
+    "sourceFileCount": 21,
+    "sourceFingerprintSha256": "dc482d3b51b2aa84e9e7ea88d42e4d08c6727b73a50518952528be7e2b972e2e"
+  },
+  "staticValidation": {
+    "command": "python3 scripts/validate.py",
+    "uniqueAssetGuids": 34,
+    "specRequirementsCount": 10,
+    "passed": true
+  },
+  "editModeTests": {
+    "command": "python3 scripts/run_unity.py --timeout 480 -- unity test . --mode EditMode --timeout 420 --output artifacts/editmode.xml -- -nographics -logFile artifacts/editmode-editor.log",
+    "total": 13,
+    "passed": 13,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0,
+    "reportSha256": "2f752d339d0125a8175ec6fbef71d1e1b56e6f232d5494647777877bd1a4e0f4",
+    "processGroupCleanupVerified": true
+  }
+}

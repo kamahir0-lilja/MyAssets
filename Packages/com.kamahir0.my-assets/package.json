@@ -1,0 +1,29 @@
+{
+  "name": "com.kamahir0.my-assets",
+  "displayName": "Lilja My Assets",
+  "version": "0.1.0",
+  "unity": "6000.0",
+  "description": "Editor bridge and optional Unity Pipeline CLI commands for searching, downloading, inspecting, and importing purchased Unity Asset Store packages.",
+  "keywords": [
+    "lilja",
+    "editor",
+    "asset-store",
+    "my-assets",
+    "pipeline",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "kamahir0",
+    "url": "https://github.com/kamahir0"
+  },
+  "documentationUrl": "https://github.com/kamahir0-lilja/MyAssets/blob/main/Packages/com.kamahir0.my-assets/README.md",
+  "changelogUrl": "https://github.com/kamahir0-lilja/MyAssets/blob/main/Packages/com.kamahir0.my-assets/CHANGELOG.md",
+  "licensesUrl": "https://github.com/kamahir0-lilja/MyAssets/blob/main/Packages/com.kamahir0.my-assets/LICENSE",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamahir0-lilja/MyAssets.git",
+    "directory": "Packages/com.kamahir0.my-assets"
+  }
+}

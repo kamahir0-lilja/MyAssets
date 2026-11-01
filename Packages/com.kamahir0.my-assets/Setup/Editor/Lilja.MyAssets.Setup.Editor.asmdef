@@ -1,0 +1,22 @@
+{
+  "name": "Lilja.MyAssets.Setup.Editor",
+  "rootNamespace": "Lilja.MyAssets.Setup.Editor",
+  "references": [],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [
+    {
+      "name": "com.unity.pipeline",
+      "expression": "",
+      "define": "LILJA_DEPENDENCY_PIPELINE_PRESENT"
+    }
+  ],
+  "noEngineReferences": false
+}
