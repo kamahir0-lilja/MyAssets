@@ -102,6 +102,10 @@ unity command myassets_import --id 123456
 unity command myassets_import --path "/path/to/package.unitypackage"
 ```
 
+## AI Agent 用 Skill
+
+AI エージェントが Unity CLI 経由で本パッケージのコマンド群（診断・検索・DL・インポート・フォールバック判断）を自律実行するためのスキル定義を [skills/unity-my-assets/SKILL.md](skills/unity-my-assets/SKILL.md) で同梱・公開しています。
+
 ## 開発と検証
 
 リポジトリ自体が開発用 Unity プロジェクトです。配布物は `Packages/com.kamahir0.my-assets/`。

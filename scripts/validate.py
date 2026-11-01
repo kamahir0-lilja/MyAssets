@@ -33,12 +33,16 @@ def validate():
             elif not any(part.endswith("~") for part in path.relative_to(directory).parts):
                 if not Path(str(path) + ".meta").exists():
                     errors.append(f"Missing metadata: {path.relative_to(ROOT)}")
-    documents = [ROOT / "AGENTS.md", ROOT / "README.md", *list((ROOT / "docs").rglob("*.md")), *list(PACKAGE.rglob("*.md"))]
+    documents = [ROOT / "AGENTS.md", ROOT / "README.md", *list((ROOT / "docs").rglob("*.md")), *list((ROOT / "skills").rglob("*.md")), *list(PACKAGE.rglob("*.md"))]
     for doc in documents:
         for target in re.findall(r"\]\(([^)]+)\)", doc.read_text()):
             if re.match(r"\w+://", target) or target.startswith("#"):
                 continue
-            if not (doc.parent / target.split("#")[0]).exists():
+            resolved = (doc.parent / target.split("#")[0]).resolve()
+            if not resolved.exists():
+                # Allow root-relative fallback for package README which must match root README byte-for-byte
+                if (ROOT / target.split("#")[0]).resolve().exists():
+                    continue
                 errors.append(f"Broken local link: {doc.relative_to(ROOT)} -> {target}")
     spec = (ROOT / "docs/specs/my-assets.md").read_text()
     ids = re.findall(r"\| (MA-[A-Z]+-\d{3}) \|", spec)
